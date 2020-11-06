@@ -24,4 +24,4 @@ jobs:
           expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
           expo-cache: true
       - run: npm install
-      - run: expo build:android ./apps/mobile
+      - run: expo build ./apps/mobile
