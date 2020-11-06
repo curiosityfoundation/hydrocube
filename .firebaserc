@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "hydrocube-b6ef7"
+  },
+  "targets": {
+    "hydrocube-b6ef7": {
+      "hosting": {
+        "console": [
+          "console-4eb3b"
+        ]
+      }
+    }
   }
 }
