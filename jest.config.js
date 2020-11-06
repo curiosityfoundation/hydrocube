@@ -3,5 +3,6 @@ module.exports = {
     '<rootDir>/apps/functions',
     '<rootDir>/apps/console',
     '<rootDir>/apps/test-node',
+    '<rootDir>/apps/mobile',
   ],
 };

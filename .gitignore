@@ -42,3 +42,15 @@ Thumbs.db
 /.firebase
 firebase-debug.log
 ui-debug.log
+
+# Expo
+.expo*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+apps/mobile/node_modules

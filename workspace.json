@@ -14,9 +14,7 @@
             "outputPath": "dist/apps/functions",
             "main": "apps/functions/src/main.ts",
             "tsConfig": "apps/functions/tsconfig.app.json",
-            "assets": [
-              "apps/functions/src/assets"
-            ]
+            "assets": ["apps/functions/src/assets"]
           },
           "configurations": {
             "production": {
@@ -87,9 +85,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/functions/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/functions/**/*.ts"]
           }
         },
         "test": {
@@ -119,9 +115,7 @@
               "apps/console/src/favicon.ico",
               "apps/console/src/assets"
             ],
-            "styles": [
-              "apps/console/src/styles.css"
-            ],
+            "styles": ["apps/console/src/styles.css"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -178,9 +172,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/console/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["apps/console/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
@@ -213,9 +205,44 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/console-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/console-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "mobile": {
+      "root": "apps/mobile",
+      "sourceRoot": "apps/mobile/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "bundle": {
+          "builder": "nx-react-native-expo:bundle",
+          "options": {}
+        },
+        "serve": {
+          "builder": "nx-react-native-expo:start",
+          "options": {}
+        },
+        "run-ios": {
+          "builder": "nx-react-native-expo:run-ios",
+          "options": {}
+        },
+        "run-android": {
+          "builder": "nx-react-native-expo:run-android",
+          "options": {}
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/mobile/**/*.{js,ts,tsx}"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/mobile/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
