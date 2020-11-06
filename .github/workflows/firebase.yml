@@ -35,16 +35,10 @@ jobs:
         with:
           name: dist
           path: dist
-      - name: Deploy functions to Firebase
+      - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: firebase deploy --only functions
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-      - name: Deploy console to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: firebase deploy --only hosting:console
+          args: firebase deploy
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
               
