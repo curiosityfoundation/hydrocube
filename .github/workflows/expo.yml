@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install mobile dependencies
+        run: npm install
+        working-directory: ./apps/mobile
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
@@ -20,5 +23,5 @@ jobs:
           expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
           expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
           expo-cache: true
-      - run: yarn install
+      - run: npm install
       - run: expo build:android ./apps/mobile
