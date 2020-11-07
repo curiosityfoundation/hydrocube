@@ -3,7 +3,7 @@ name: Build and publish to Expo
 on:
   push:
     branches:
-      - master
+      - production
 
 jobs:
   build:
