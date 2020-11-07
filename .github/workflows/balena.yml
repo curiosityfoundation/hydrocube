@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Install project dependencies
         run: npm install
-      # - name: Setup node
-      #   uses: actions/setup-node@v1.1.0
+      - name: Setup node
+        uses: actions/setup-node@v1.1.0
       - name: Build device
         run: npm run build device
       - name: Push to Balena
