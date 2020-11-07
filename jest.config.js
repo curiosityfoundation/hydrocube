@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/apps/console',
     '<rootDir>/apps/test-node',
     '<rootDir>/apps/mobile',
+    '<rootDir>/apps/device',
   ],
 };

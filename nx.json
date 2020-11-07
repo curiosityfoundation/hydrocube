@@ -35,6 +35,9 @@
     },
     "mobile": {
       "tags": []
+    },
+    "device": {
+      "tags": []
     }
   }
 }
