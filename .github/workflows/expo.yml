@@ -3,11 +3,11 @@ name: Build and publish to Expo
 on:
   push:
     branches:
-      - add-expo
+      - master
 
 jobs:
   build:
-    name: Build and deploy
+    name: Build and deploy mobile
     runs-on: macos-latest
     steps:
       - name: Checkout repo
@@ -28,9 +28,9 @@ jobs:
           expo-username: ${{ secrets.EXPO_CLI_USERNAME }}
           expo-password: ${{ secrets.EXPO_CLI_PASSWORD }}
           expo-cache: true
-      - name: Build ios
-        run: expo build:ios
-        working-directory: ./apps/mobile
       - name: Build android
         run: expo build:android
         working-directory: ./apps/mobile
+      # - name: Build ios
+      #   run: expo build:ios
+      #   working-directory: ./apps/mobile
